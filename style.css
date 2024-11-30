@@ -5,3 +5,7 @@ body {
 .btn .btn-primary {
     background-color: #e89e64 !important;
 }
+
+input {
+    background-color: #8da9c4;
+}
