@@ -1,5 +1,5 @@
 body {
-    background-color: #eef4ad;
+    background-color: #eef4ed;
 }
 
 .btn .btn-primary {
@@ -8,4 +8,36 @@ body {
 
 input {
     background-color: #8da9c4;
+}
+
+select {
+    background-color: #8da9c4;
+}
+
+
+#box {
+    background-color: #13315c;
+}
+
+.radio input:checked[type="radio"] ::before{ 
+    background-color: #e89e64;
+    border-color: #e89e64; 
+    accent-color: #e89e64;
+    filter: #e89e64;
+}
+
+a {
+    text-decoration: none;
+    color:white;
+}
+
+#image {
+    background-image: url("https://t4.ftcdn.net/jpg/03/43/14/87/360_F_343148725_LLIgr5Sp1XfvG5xwmV8w6hRkPybKOqva.jpg"); 
+    background-color: #0b2545;
+}
+
+nav {
+    background-color: #13315c; 
+    border-color:#134074; 
+    bottom: 0;
 }
