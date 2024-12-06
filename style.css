@@ -41,3 +41,16 @@ nav {
     border-color:#134074; 
     bottom: 0;
 }
+.progress .bg {
+    background-color: #eef4ed;
+}
+.bar {
+    background-color: #e89e64;
+}
+
+.item-modal {
+    width:125px; 
+    height:125px; 
+    background-size: contain;
+    background-repeat: no-repeat;
+}
