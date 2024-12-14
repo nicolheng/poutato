@@ -1,0 +1,112 @@
+*{
+    margin:0;
+    padding : 0;
+}
+
+body {
+    background: url('image/lol2.jpg'); /* Replace with your actual image path */
+    background-repeat: no-repeat;
+    background-position: top center; /* Ensures proper alignment */
+    background-size: cover; /* Makes sure the background fills the screen */
+    height: 100vh; /* Full height of the viewport */
+    width: 100vw; /* Full width of the viewport */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    overflow: hidden; /* Prevents scrollbars from appearing */
+    position: relative;
+    top: 33em;
+}
+
+.button_1{
+    position:relative;
+    bottom:33rem;
+    right:10rem;
+    border: none;
+    background-color:transparent ;
+    color: white;
+}
+
+.button_1:hover{
+    background-color:rgba(200, 200, 200, 0.629);
+}
+
+.A{
+    width: 271px;
+    height: 40px;
+    border-radius:20px; 
+    margin: 0.6rem;
+}
+
+.A:hover{
+    color:rgba(200, 200, 200, 0.629);
+}
+
+.C{
+    width: 271px;
+    height: 40px;
+    margin: 0.6rem;
+    border-radius:20px; 
+}
+
+.C:hover{
+background-color:rgba(200, 200, 200, 0.629);
+}
+
+dialog{
+    margin: auto;
+    width: 324px;
+    height: 242px;
+    border-radius: 20px;
+    font-size: 3ch;
+    font-family: 'Sofia Sans Condensed', sans-serif;
+    color: white;
+    background-color: black;
+    border: none;
+}
+
+dialog::backdrop {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.close_button{
+    position: relative;
+    top:0.2rem;
+    left: 17.2rem;
+    background-color: black;
+    color:white;
+    margin-top: 5px;
+}
+
+.des{
+    display: flex;
+   justify-content: center;
+   align-items: center;
+   text-align: justify;
+   text-align-last: left;
+   padding: 20px;
+   font-size: 1.6rem;
+}
+
+.h4{
+    text-indent: 20px;
+    letter-spacing: 1px;
+    word-spacing: 10px;
+   font-size: 1.8rem;
+}
+
+.audio{
+    position: relative;
+    left: 10rem;
+    bottom: 29rem;
+    background-color: transparent;
+    color: white;
+    border: none;
+}
+
+@media (max-width: 475px) {
+    body {
+        background-size: 100% 100%; /* Stretch to fit smaller screens without cropping */
+    }
+}
