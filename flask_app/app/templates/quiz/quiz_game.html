@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>quiz game</title>
+    <link rel="stylesheet" href="quiz_game.css";>
+    <link href="https://fonts.cdnfonts.com/css/sofia-sans-condensed" rel="stylesheet">
+    <link rel ="stylesheet" href="css/all.min.css">
+    <link rel ="stylesheet" href="css/fontawesome.min.css">
+    <script src="https://kit.fontawesome.com/a2c9f2c27c.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <button id="toggleAudio" class="audio"><i class="fa-solid fa-volume-high fa-2x"></i></button>
+    <button class="button_1" onclick="goBack()"><i class="fa-solid fa-arrow-left fa-3x"></i></button>
+    <div class="buttons">
+        <button id="A" class="A">MAN</button>
+            <dialog id="A-modal">
+                <button id="close_modal_A" class="close_button"><i class="fa-regular fa-circle-xmark fa-3x"></i></button>
+                <p class="h4">Your answer is correct</p>
+                <description class="des">Wide-area networks ( WANs ) provide inter-LAN connectivity between sites</description>
+            </dialog>
+        
+    <br>
+            
+        <button id="B" class="A">PAN</button>
+            <dialog id="B-modal">
+                <button id="close_modal_B" class="close_button"><i class="fa-regular fa-circle-xmark fa-3x"></i></button>
+                <p class="h4">Your answer is correct</p>
+                <description class="des">Wide-area networks ( WANs ) provide inter-LAN connectivity between sites</description>
+            </dialog>
+    <br>
+        <button id="C" class="C">WAN</button>
+            <dialog id="C-modal">
+                <button id="close_modal_C" class="close_button"><i class="fa-regular fa-circle-xmark fa-3x"></i></button>
+                <p class="h4">Your answer is correct</p>
+                <description class="des">Wide-area networks ( WANs ) provide inter-LAN connectivity between sites</description>
+            </dialog>
+    <br>
+        <button id="D" class="A">LAN</button>
+            <dialog id="D-modal">
+                <button id="close_modal_D" class="close_button"><i class="fa-regular fa-circle-xmark fa-3x"></i></button>
+                <p class="h4">Your answer is correct</p>
+                <description class="des">Wide-area networks ( WANs ) provide inter-LAN connectivity between sites</description>
+            </dialog>
+            
+    </div>
+
+    <audio id="song" autoplay>
+        <source src="audio/[MapleStory BGM] Ludibrium_ Timeless.mp3">
+    </audio>
+
+    <script>
+
+        function goBack() {
+            window.location.href = "quiz_interface.html"; // Change this to your target page
+        }
+
+        const openBtn_A = document.querySelector('#A');
+        const dialog_A = document.querySelector('#A-modal');
+        const closeBtn_A = document.querySelector('#close_modal_A');
+
+        openBtn_A.addEventListener('click', () => dialog_A.showModal());
+        closeBtn_A.addEventListener('click', () => dialog_A.close());
+
+        const openBtn_B = document.querySelector('#B');
+        const dialog_B = document.querySelector('#B-modal');
+        const closeBtn_B = document.querySelector('#close_modal_B');
+
+        openBtn_B.addEventListener('click', () => dialog_B.showModal());
+        closeBtn_B.addEventListener('click', () => dialog_B.close());
+
+        const openBtn_C = document.querySelector('#C');
+        const dialog_C = document.querySelector('#C-modal');
+        const closeBtn_C = document.querySelector('#close_modal_C');
+
+        openBtn_C.addEventListener('click', () => dialog_C.showModal());
+        closeBtn_C.addEventListener('click', () => dialog_C.close());
+
+        const openBtn_D = document.querySelector('#D');
+        const dialog_D = document.querySelector('#D-modal');
+        const closeBtn_D = document.querySelector('#close_modal_D');
+
+        openBtn_D.addEventListener('click', () => dialog_D.showModal());
+        closeBtn_D.addEventListener('click', () => dialog_D.close());
+
+        const audioToggleBtn = document.querySelector('#toggleAudio');
+            audioToggleBtn.addEventListener('click', () => {
+        const audio = document.getElementById("song");
+        if (audio.paused) {
+            audio.play(); // Start the audio if it is paused
+            audioToggleBtn.innerHTML = '<i class="fa-solid fa-volume-high fa-2x"></i>'; // Update button text
+        } else {
+            audio.pause(); // Pause the audio
+            audioToggleBtn.innerHTML = '<i class="fa-solid fa-volume-xmark fa-2x"></i>'; // Update button text
+    }
+});
+
+    </script>
+
+</body>
+
+</html>

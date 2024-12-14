@@ -1,0 +1,123 @@
+*{
+    margin:0;
+    padding : 0;
+}
+
+.tittle{
+    position:relative;
+    font-size:4rem;
+    font-family: 'Public Pixel', sans-serif;                                              
+}
+
+ body{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 5rem;
+    margin: 1rem;
+    overflow: hidden;
+
+ }
+
+ .quiz_interface_pic{
+    width: 311px;
+    height: 517px;
+    top:231px;
+    left: 46px;
+    border: none;
+    border-radius: 20px;
+    border:solid 2px;
+    margin: 1rem;
+
+}
+
+.button_1{
+    position:relative;
+    right:3rem;
+    bottom: 65px;
+    border: none;
+    background-color:white ;
+}
+
+.audio{
+    position: relative;
+    left: 10rem;
+    bottom: 47.5rem;
+    background-color: transparent;
+    color: rgb(0, 0, 0);
+    border: none;
+}
+
+.button_2{
+    position:relative;
+    bottom: 92px;
+    width: 150px;
+    height: 40px;
+    border-radius: 20px;
+    font-family: 'Sofia Sans Condensed', sans-serif;
+    font-size: 2rem;
+}
+
+.button_2:hover{
+    background-color:rgba(174, 174, 174, 0.675);
+}
+
+.button_3{
+    position:relative;
+    bottom: 30px;
+    right: 9rem;
+    width: 70px ;
+    height: 64px;
+    border:solid 2px;
+    border-radius: 20px;
+    font-family: 'Sofia Sans Condensed', sans-serif;
+    font-style: bold;                             
+}
+
+.button_3:hover{
+    background-color:rgba(200, 200, 200, 0.629);
+}
+
+.fa-solid.fa-medal.fa-3x{
+    color: rgb(255, 191, 0);
+}
+
+dialog{
+    margin: auto;
+    width: 345px;
+    height: 682px;
+    border-radius: 20px;
+    float: center;
+}
+
+dialog::backdrop {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.close_modal{
+    position: relative;;
+    top: 0.5rem;
+    left: 18rem;
+    background-color: white;
+    border: none;
+}
+
+.close_modal:hover{
+    background-color:rgba(174, 174, 174, 0.675);
+}
+
+.modal-image {
+    margin: 1rem;
+    max-width: 90%; 
+    max-height: 90%; 
+    object-fit: contain;
+}
+
+@media (min-width:475px){
+    .body{
+        max-width: 475px;
+    }
+}
+
+

@@ -1,0 +1,450 @@
+* {
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 3px;
+    overflow: hidden;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.grid-container {
+    height: 100vh;
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(4, 200px);
+    background-color: rgba(209, 255, 225, 0.436);
+}
+
+.grid-item {
+    overflow: hidden;
+    position: relative;
+}
+
+.item1 {
+    
+    grid-column: span 2;
+    grid-row: span 2;
+}
+
+.topbutton_container{
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items:start;
+    gap: 1rem;
+}
+
+.topbutton{
+    width: 54.62px;
+    height: 54.62px;
+    cursor: pointer;
+    border:none;
+    border-radius: 20px;
+    background-color:white ;
+}
+
+.topbutton:hover{
+    background-color: rgb(208, 208, 208);
+}
+
+.bulb-modal{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color:rgb(107,163,248);
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    height: 45%;
+    font-size: 2ch;
+    font-style: bold;
+}
+
+.choice{
+    margin-left: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.choices{
+    margin: 0.5rem;
+    width: 95%;
+    padding: 0.3rem;
+    border-radius: 20px;
+    border: none;
+    text-align: center;
+    font-size: 1.8ch;
+    font-style: bold;
+    cursor: pointer;
+}
+
+.choices:hover{
+    background-color: rgb(208, 208, 208);
+}
+
+.answer{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #000000b3;
+    padding: 20px;
+    border:none;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    width: 60%;
+    height: 30%;
+}
+
+#choice .h4 {
+    margin-top :0.5rem;
+    color: #ffffff;
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: 10px;
+    text-align: center;
+    position: relative;
+    bottom: 1.5rem;
+    max-width: 500px;
+  }
+
+#choice .des {
+    font-size: 18px;
+    color: #ffffff;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.choices.green {
+    background-color: rgb(41, 218, 41); 
+    color: #fff;
+  }
+  
+  .choices.red {
+    background-color: #f00;
+    color: #fff;
+  }
+
+  .chart-modal{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color:rgb(141,169,196);
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    height: 45%;
+    font-style: bold;
+}
+
+.question{
+    font-size: 36px;
+    position: relative;
+    bottom: 1rem;
+    text-align: center;
+}
+
+.OPTION{
+    width: 100%;
+    margin: 0.5rem;
+    width: 95%;
+    padding: 0.7rem;
+    border: none;
+    text-align: center;
+    font-size: 1rem;
+    font-style: bold;
+    cursor: pointer;
+    text-align: start;
+}
+
+.OPTION:hover{
+    background-color: rgb(208, 208, 208);
+}
+
+.item2 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    padding: 0;
+    grid-column: span 1;
+    grid-row: span 1;
+}
+
+.item2 video{
+    width: 226px;
+    height: 184px;
+    object-fit: cover;
+    border: 1px solid black;
+    border-radius: 15px;
+}
+
+.name{
+   position:relative;
+   bottom: 33px;
+   right: 98px;
+}
+
+.switch-container{
+    display: flex;
+    justify-content: end;
+    position: relative;
+    padding: 1rem;
+    bottom: 4rem;
+    left: 1rem;
+}
+
+.switch{
+    background-color: black;
+    color: white;
+    font-size: 1rem;
+    border-radius: 15px;
+    border: none;
+    height: 30%;
+    width: 80%;
+}
+
+.item3 {
+    position: fixed;
+    bottom: 50%;
+    right: 0;
+    margin-right: 15px;
+    grid-column: span 1;
+    grid-row: span 1;
+}
+
+.button_container{
+    color: black;
+    width: 0.5rem;
+    height: 5rem;
+    border-radius: 20px;
+    background-color: black;
+    cursor: pointer;
+}
+
+.slide-modal{
+    position: absolute;
+    top: 48%;
+    left: auto;
+    margin-right: 1rem;
+    transform: translateY(-50%);
+    height: 45vh;
+    padding-left: 2rem;
+    border: none;
+    background-color: rgb(19,49,92);
+    border-radius: 20px;
+}
+
+.feature-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    right:1rem;
+    font-size: small;
+}
+
+.font-color{
+    color: white;
+    font-size: 12px;
+}
+
+.feature-button{
+    width: 74px;
+    height: 74px;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+.feature-button:hover{
+    background-color: rgb(208, 208, 208);
+}
+
+.chat{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color:rgb(255, 255, 255);
+    padding: 20px;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    width: 90%;
+    height: 80%;
+    font-size: 2ch;
+    font-style: bold;
+}
+
+  /* The popup chat which is hidden by default */
+  .chat-popup{
+    display:none;
+    position: fixed;
+    bottom:0;
+    right:15px;
+    z-index:9;
+  }
+  
+  /* Adds styles to the form container */
+  .form-container{
+    max-width:100%;
+    height: 100vh;
+    padding: 10px;
+    background-color: white;
+    border-radius: 8px;
+  }
+  
+  /* Enables full-width textarea */
+  .form-container textarea{
+    width:100%;
+    height: 55%;
+    padding:15px;
+    border:none;
+    background: #f1f1f1;
+    border-radius: 8px;
+    resize:none;
+  }
+
+  /* When the textarea gets focus, do something (changes color)*/
+  .form-container textarea:focus{
+    background-color:#ddd;
+    outline:none;
+  }
+  /* Set a style for the submit/send button */
+  .form-container .btn{
+    background-color: #04aa6d;
+    color:white;
+    padding:16px 20px;
+    border-radius: 8px;
+    border:none;
+    cursor:pointer;
+    width:100%;
+    margin-bottom: 10px;
+    opacity: 0.8;
+    transition: 0.3s;
+  }
+  /* Adds a red background color to the cancel button */
+  .form-container .cancel{
+    background-color: red;
+  }
+  
+  /* Adds hover effects to all the buttons */
+  .form-container .btn:hover, .open-button:hover{
+    opacity:1;
+  }
+
+  .input{
+    position: relative;
+    padding: 0.3rem;
+    border-radius: 10px;
+    border: none;
+    width: 100%;
+  }
+
+.item4 {
+    grid-column: span 3 ;
+    justify-self: end;
+    align-self: end;
+}
+
+.good_button{
+    position: fixed;
+    bottom:12rem;
+    right:0 ;
+    margin-right: 1rem;
+    width: 54.62px;
+    height: 54.62px;
+    cursor: pointer;
+    border: 1px solid black;
+    border-radius: 30px;
+    background-color:white;
+}
+
+.good_button:hover{
+    background-color: rgb(208, 208, 208);
+}
+
+.item5 {
+    position: relative;
+    top: 3rem;
+    grid-column: span 3;
+    grid-row: span 1;
+    justify-self: center;
+    align-content:end;
+    width: 100%;
+}
+
+.fourButton-container{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 106px;
+    padding:0.5rem;
+    border-radius: 20px;
+    background-color:rgb(11, 37,69) ;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); 
+}
+
+.fourButton{
+    width: 100%;
+    padding: 0.5rem;
+    border-radius: 20px;
+    cursor: pointer;
+    background-color: rgb(255, 255, 255);
+}
+
+.fourButton:hover{
+    background-color: rgb(208, 208, 208);
+}
+
+.fourButton::after{
+    background-color: brown;
+}
+
+.close-modal{
+    position: relative;
+    bottom: 0.3rem;
+    right: 0.5rem;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.close_button{
+    position: relative;
+    bottom: 0.3rem;
+    right: 0.5rem;
+    color: white;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+
+@media (max-width: 768px) {
+    #choice .h4 {
+      font-size: 18px;
+    }
+    #choice .des {
+      font-size: 14px;
+    }
+  }
+  
+  /* Media query for even smaller screens (phone size) */
+  @media (max-width: 480px) {
+    #choice .h4 {
+      font-size: 14px;
+    }
+    #choice .des {
+      font-size: 12px;
+    }
+  }

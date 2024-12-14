@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="breakoutroom.css">
+    <link rel ="stylesheet" href="css/all.min.css">
+    <link rel ="stylesheet" href="css/fontawesome.min.css">
+    <title>Custom Layout</title>
+</head>
+
+<body>
+    <div class="grid-container">
+
+        <div class="grid-item item1">
+            <div class = "topbutton_container">
+
+                <button class="topbutton" onclick="goToNextRoom()"><i class="fa-solid fa-arrow-right-from-bracket fa-3x"></i></button>
+
+                <button id="open-bulb-modal" class="topbutton"><i class="fa-solid fa-lightbulb fa-3x"></i></button>
+                <dialog id="bulb" class="bulb-modal">
+                    <button id="close-bulb-modal" class="close-modal" ><i class="fa-regular fa-circle-xmark fa-3x"></i></button>
+                    <p class="choice">Question : Which type of computing is located at the edge of a business or coperate network and that allows data from sensors to be processed?</p>
+                    <div class="choice">
+                        <button id="open-choice-modal-1" class="choices" data-choice="1">A. Wireless</button>
+                        <button id="open-choice-modal-2" class="choices" data-choice="2">B. Fog</button>
+                        <button id="open-choice-modal-3" class="choices" data-choice="3">C. Internet</button>
+                        <button id="open-choice-modal-4" class="choices" data-choice="4">D. WAN</button>
+                        <dialog id="choice" class="answer">
+                        <button id="close-choice-modal" class="close_button"><i class="fa-regular fa-circle-xmark fa-3x"></i></button>
+                        <p class="h4"></p>
+                        <description class="des"></description>
+                        </dialog>
+                    </div>
+                </dialog>
+
+                <button id="open-chart-modal" class="topbutton"><i class="fa-solid fa-chart-simple fa-3x"></i></button>
+                <dialog id="chart" class="chart-modal">
+                    <button id="close-chart-modal" class="close-modal" ><i class="fa-regular fa-circle-xmark fa-3x"></i></button>
+                    <h2 class="question">Question</h2>
+                    <ul class="opt">
+                        <li><button class="OPTION">1. OPTION 1</button></li>
+                        <li><button class="OPTION">2. OPTION 2</button></li>
+                        <li><button class="OPTION">3. OPTION 3</button></li>
+                        <li><button class="OPTION">4. OPTION 4</button></li>
+                    </ul>
+                </dialog>
+            </div>
+        </div>
+
+        <div class="grid-item item2">
+            <video id="video" width="640" height="480"></video>
+            <div class="name">
+                <p ></p>your_username</p>
+            </div>    
+        </div>
+
+        <div class="grid-item item3">
+            <button id="open-slidebar-modal" class="button_container"></button>
+        </div>
+
+        <dialog id="slidebar" class="slide-modal">
+            <button id="close-slidebar-modal" class="close-modal"></button>
+            <div class="feature-container">
+              <button id="open-chat-modal" class="feature-button"><i class="fa-regular fa-message fa-3x"></i></button>
+              <p class="font-color">Chat</p>
+
+                <dialog id="chat" class="chat">
+                <button id="close-chat-modal" class="close-modal" ><i class="fa-solid fa-down-left-and-up-right-to-center fa-3x"></i></button>
+
+                <form class="form-container" action="#">
+                <div><label for="msg">Welcome to the chatroom !</label></div>
+                <textarea placeholder="Good morning! I hope everyone is ready for class. Just a quick reminder to check your WiFi connection and make sure everything is set up properly.Class will begin in 5minutes!" id="text"></textarea>
+
+                <input id="newText" type="text" class="input" placeholder="Enter your messege here!">
+                <button type="submit" class="btn" onclick="addText()">Send</button>
+              </form>
+
+            </dialog>
+
+              <button id="sharescreen" class="feature-button"><i class="fa-solid fa-arrow-up-from-bracket fa-3x"></i></button>
+              <p class="font-color">Share screen</p>
+              </dialog> 
+          
+            <dialog id="shared-screen-modal" class="slide-modal">
+            <button id="close-shared-screen-modal" class="close-modal"></button>
+            <div class="feature-container">
+              <video id="shared-screen-video" width="100%" height="100%"></video>
+              <button id="stop-sharing-button" class="feature-button">Stop Sharing</button>
+            </div>
+          </dialog>
+
+        <div class="grid-item item4">
+            <button class="good_button"><i class="fa-solid fa-thumbs-up fa-2x"></i></button>
+        </div>
+
+        <div class="grid-item item5">
+             <div class = "fourButton-container">
+                <button id="videoIcon" class="fourButton"><i class="fa-solid fa-video fa-3x"></i></button>                
+                <button id="microphoneIcon" class="fourButton"><i class="fa-solid fa-microphone fa-3x"></i></button>
+                <button id="colorToggleButton" class="fourButton"><i class="fa-regular fa-hand fa-3x"></i></button>
+                <button onclick="goBack()" class="fourButton"><i class="fa-solid fa-phone-slash fa-3x"></i></button>
+             </div>
+        </div>
+    </div>
+
+    <script src="breakoutroom.js"></script>
+
+</body>
+
+</html>

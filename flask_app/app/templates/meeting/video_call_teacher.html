@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="video_call_teacher.css">
+    <link rel ="stylesheet" href="css/all.min.css">
+    <link rel ="stylesheet" href="css/fontawesome.min.css">
+    <title>Custom Layout</title>
+</head>
+
+<body>
+    <div class="grid-container">
+
+        <div class="grid-item item1">
+            <div class = "topbutton_container">
+
+                <button class="topbutton" onclick="goBack()" ><i class="fa-solid fa-down-left-and-up-right-to-center fa-3x"></i></button>
+
+                <button id="open-chart-modal" class="topbutton"><i class="fa-solid fa-chart-simple fa-3x"></i></button>
+                <dialog id="chart" class="chart-modal">
+                    <button id="close-chart-modal" class="close-modal" ><i class="fa-regular fa-circle-xmark fa-3x"></i></button>
+                    <button id="open-quiz-modal" class="question">Release pop quiz</button>
+                        <dialog id="popquiz" class="popquiz">
+                            <button id="close-quiz-modal" class="close-modal" ><i class="fa-regular fa-circle-xmark fa-3x"></i></button>
+                            <h2>Pop Quiz Report</h2>
+                            <div class="report-item">
+                                <label for="correct">Correct Answers:</label>
+                                <span id="correct">8</span>
+                                </div>
+                            <div class="report-item">
+                                <label for="incorrect">Incorrect Answers:</label>
+                                <span id="incorrect">2</span>
+                                </div>
+                            <div class="report-item">
+                                <label for="score">Score:</label>
+                                <span id="score">80%</span>
+                                </div>
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 80%;"></div>
+                                </div>
+                        </dialog>
+                    <ul class="opt">
+                        <li><button class="OPTION">1. QUESTION 1</button></li>
+                        <li><button class="OPTION">2. QUESTION 2</button></li>
+                        <li><button class="OPTION">3. QUSTION 3</button></li>
+                        <li><button class="OPTION">4. QUESTION 4</button></li>
+                    </ul>
+                </dialog>
+                
+                <button id="open-bulb-modal" class="topbutton"><i class="fa-solid fa-lightbulb fa-3x"></i></button>
+                <dialog id="bulb" class="bulb-modal">
+                    <button id="close-bulb-modal" class="close-modal" ><i class="fa-regular fa-circle-xmark fa-3x"></i></button>
+                    <p class="choice">Question : Which type of computing is located at the edge of a business or coperate network and that allows data from sensors to be processed?</p>
+                    <div class="choice">
+                        <button id="open-choice-modal-1" class="choices" data-choice="1">A. Wireless</button>
+                        <button id="open-choice-modal-2" class="choices" data-choice="2">B. Fog</button>
+                        <button id="open-choice-modal-3" class="choices" data-choice="3">C. Internet</button>
+                        <button id="open-choice-modal-4" class="choices" data-choice="4">D. WAN</button>
+                        <dialog id="choice" class="answer">
+                        <button id="close-choice-modal" class="close_button"><i class="fa-regular fa-circle-xmark fa-3x"></i></button>
+                        <p class="h4"></p>
+                        <description class="des"></description>
+                        </dialog>
+                    </div>
+                </dialog>
+
+            </div>
+        </div>
+
+        <div class="grid-item item2">
+            <video id="video" width="640" height="480"></video>
+            <div class="name">
+                <p ></p>your_username</p>
+            </div>    
+        </div>
+
+        <div class="grid-item item3">
+            <button id="open-slidebar-modal" class="button_container"></button>
+        </div>
+
+        <div class="switch-container">
+            <button class="switch" onclick="goToNextPage()">Switch to student mode</button>
+        </div>
+        
+        <dialog id="slidebar" class="slide-modal">
+            <button id="close-slidebar-modal" class="close-modal"></button>
+            <div class="feature-container">
+
+                <div class="feature-item">
+                    <button id="open-poll-modal" class="feature-button"><i class="fa-solid fa-square-poll-horizontal fa-3x"></i></button>
+                    <p class="font-color">Poll</p>
+                        <dialog id="poll" class="wrapper">
+                            <button id="close-poll-modal" class="close-modal" ><i class="fa-regular fa-circle-xmark fa-3x"></i></button>
+                            <h2>Please choose only 1 answer</h2>
+                            <div class="poll-area">
+                                <label for="">
+                                  <div class="row">
+                                    <div class="column">
+                                      <span class="circle"></span>
+                                      <span class="text">OPTION 1</span>
+                                    </div>
+                                    <span class="percent">23%</span>
+                                  </div>
+                                  <div class="progress" style="--w: 23"></div>
+                                </label>
+                                <label for="">
+                                  <div class="row">
+                                    <div class="column">
+                                      <span class="circle"></span>
+                                      <span class="text">OPTION 2</span>
+                                    </div>
+                                    <span class="percent">47%</span>
+                                  </div>
+                                  <div class="progress" style="--w: 47"></div>
+                                </label>
+                                <label for="">
+                                  <div class="row">
+                                    <div class="column">
+                                      <span class="circle"></span>
+                                      <span class="text">OPTION 3</span>
+                                    </div>
+                                    <span class="percent">12%</span>
+                                  </div>
+                                  <div class="progress" style="--w: 12"></div>
+                                </label>
+                                <label for="">
+                                  <div class="row">
+                                    <div class="column">
+                                      <span class="circle"></span>
+                                      <span class="text">OPTION 4</span>
+                                    </div>
+                                    <span class="percent">18%</span>
+                                  </div>
+                                  <div class="progress" style="--w: 18"></div>
+                                </label>
+                                <button class="open-respond-modal">Not Responding : 6</button>
+                                    <dialog id="respond" class="respond-modal">
+                                        <button id="close-respond-modal" class="close-modal" ><i class="fa-regular fa-circle-xmark fa-3x"></i></button>
+                                        <div class="not-responding">
+                                            <h2 class="t-respond">Not Responding</h2>
+                                            <ul>
+                                                <li class="student-status">
+                                                    <span class="student">Student 1</span>
+                                                    <span class="status">Not responding</span>
+                                                </li>
+                                                <li class="student-status">
+                                                    <span class="student">Student 2</span>
+                                                    <span class="status">Not responding</span>
+                                                </li>
+                                                <li class="student-status">
+                                                    <span class="student">Student 3</span>
+                                                    <span class="status">Not responding</span>
+                                                </li>
+                                                <li class="student-status">
+                                                    <span class="student">Student 4</span>
+                                                    <span class="status">Not responding</span>
+                                                </li>
+                                                <li class="student-status">
+                                                    <span class="student">Student 5</span>
+                                                    <span class="status">Not responding</span>
+                                                </li>
+                                                <li class="student-status">
+                                                    <span class="student">Student 6</span>
+                                                    <span class="status">Not responding</span>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </dialog>
+                              </div>
+                        </dialog>
+                </div>
+                
+                <div class="feature-item">
+                    <button id="open-canvas-modal" class="feature-button"><i class="fa-solid fa-chalkboard-user fa-3x"></i></button>
+                    <p class="font-color">Whiteboard</p>
+                        <dialog id="canvas" class="canvas-modal">
+                            <button id="close-canvas-modal" class="close-modal" ><i class="fa-regular fa-circle-xmark fa-3x"></i></button>
+                                <section class="tools-board">
+                                    <div class="row">
+                                        <label class="title">Shapes</label>
+                                        <ul class="options">
+                                            <li class="option tool" id="rectangle">
+                                                <img src="image/rectangle.svg" alt="">
+                                                <span>Rectangle</span>
+                                            </li>
+                                            <li class="option tool" id="rectangle">
+                                                <img src="image/circle.svg" alt="">
+                                                <span>Circle</span>
+                                            </li>
+                                            <li class="option tool" id="rectangle">
+                                                <img src="image/triangle.svg" alt="">
+                                                <span>Triangle</span>
+                                            </li>
+                                            <li class="option">
+                                                <input type="checkbox" id="fill-color">
+                                                <label for="fill-color">Fill Color</label>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="row">
+                                        <label class="title">Options</label>
+                                        <ul class="options">
+                                            <li class="option active tool" id="brush">
+                                                <img src="image/brush.svg" alt="">
+                                                <span>Brush</span>
+                                            </li>
+                                            <li class="option active tool" id="brush">
+                                                <img src="image/eraser.svg" alt="">
+                                                <span>Eraser</span>
+                                            </li>
+                                            <li class="option">
+                                                <input type="range" id="size-slider" min="1" max="30" value="5">
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="row colors">
+                                        <label class="title">Colors</label>
+                                        <ul class="options">
+                                            <li class="option"></li>
+                                            <li class="option selected"></li>
+                                            <li class="option"></li>
+                                            <li class="option"></li>
+                                            <li class="option">
+                                                <input type="color" id="color-picker" value="#4a98f7">
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="row buttons">
+                                        <button class="clear-canvas">Clear Canvas</button>
+                                        <button class="save-img">Save As Image</button>
+                                    </div>
+                                </section>
+                                <section class="drawing-board">
+                                    <canvas></canvas>
+                                </section>
+                        </dialog>
+                </div>
+            
+                <div class="feature-item">
+                    <button id="open-recording-modal" class="feature-button"><i class="fa-solid fa-record-vinyl fa-3x"></i></button>
+                    <p class="font-color">Recording</p>
+                </div>
+            
+                <div class="feature-item">
+                    <button id="open-attendance-modal" class="feature-button"><i class="fa-solid fa-user-clock fa-3x"></i></button>
+                    <p class="font-color">Attendance</p>
+                        <dialog id="attendance" class="attendance-modal">
+                            <button id="close-attendance-modal" class="close-modal" ><i class="fa-regular fa-circle-xmark fa-3x"></i></button>
+                            <div class="grid">
+                                <div class="column-header">Lecture</div>
+                                <div class="column-header">Time</div>
+                                <div class="column-header">Attendance Report</div>
+                                
+                                <div class="grid-item">week 1</div>
+                                <div class="grid-item">7th Oct<br>8-10am</div>
+                                <div class="grid-item generate-btn" id="open-generate-modal">generate</div>
+                                
+                                <div class="grid-item">week 2</div>
+                                <div class="grid-item">14th Oct<br>8-10am</div>
+                                <div class="grid-item generate-btn" id="open-generate-modal">generate</div>
+                                
+                                <div class="grid-item">week 3</div>
+                                <div class="grid-item">21th Oct<br>8-10am</div>
+                                <div class="grid-item generate-btn" id="open-generate-modal">generate</div>
+                                
+                                <div class="grid-item">week 4</div>
+                                <div class="grid-item">28th Oct<br>8-10am</div>
+                                <div class="grid-item generate-btn" id="open-generate-modal">generate</div>
+                                
+                                <div class="grid-item">week 5</div>
+                                <div class="grid-item">4th Nov<br>8-10am</div>
+                                <button class="grid-item generate-btn" id="open-generate-modal">generate</button>
+
+                            </div>
+
+                            <dialog id="generate" class="generate-attendance-modal">
+                                <div class="generate-attendance-container">
+                                    <button id="close-generate-modal" class="close-modal" ><i class="fa-regular fa-circle-xmark fa-3x"></i></button>
+                                    <h1>Attendance Report</h1>
+                                    <table>
+                                        <thead>
+                                            <tr>
+                                                <th>Name</th>
+                                                <th>Duration</th>
+                                                <th>Time joined</th>
+                                                <th>Time exited</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>Student 1</td>
+                                                <td>60 mins</td>
+                                                <td>0800</td>
+                                                <td>0900</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Student 2</td>
+                                                <td>60 mins</td>
+                                                <td>0800</td>
+                                                <td>0900</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Student 3</td>
+                                                <td>32 mins</td>
+                                                <td>0800</td>
+                                                <td>0832</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Student 4</td>
+                                                <td>45 mins</td>
+                                                <td>0815</td>
+                                                <td>0845</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Student 5</td>
+                                                <td>30 mins</td>
+                                                <td>0812</td>
+                                                <td>0842</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Student 6</td>
+                                                <td>40 mins</td>
+                                                <td>0810</td>
+                                                <td>0850</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </dialog>
+
+                </div>
+            
+                <div class="feature-item">
+                    <button id="open-breakout-modal" class="feature-button"><i class="fa-solid fa-users-between-lines fa-3x"></i></button>
+                    <p class="font-color">Breakout</p>
+                    <dialog id="breakout" class="breakout-modal">
+                        <button id="close-breakout-modal" class="close-modal" ><i class="fa-regular fa-circle-xmark fa-3x"></i></button>
+                        <div class="breakout-room">
+                            <h2>Breakout room</h2>
+                            <input id="newText" type="text" class="input-class" placeholder="Enter  total breakout room">
+                            <h2>Participant</h2>
+                            <input id="newText" type="text" class="input-class" placeholder="Enter total participant">
+                            <button id="open-apply-modal" class="apply">Apply</button>
+                                <dialog id="apply" class="apply-modal">
+                                    <div>
+                                        <button id="close-apply-modal" class="close-modal" ><i class="fa-regular fa-circle-xmark fa-3x"></i></button>
+                                        <div class="assign">
+                                            <h2>How to assign</h2>
+                                            <button class="open-assign-auto-modal assign-btn">Assign automatically</button>
+                                            <button class="open-assign-auto-modal assign-btn">Let participates chooseroom </button>
+                                                
+                                                <dialog id="assign-auto" class="assign-auto-modal">
+                                                    <button id="close-assign-auto-modal" class="close-modal" ><i class="fa-regular fa-circle-xmark fa-3x"></i></button>
+                                                        <div class="open-assign-auto-container">
+                                                            <h2>Breakout Rooms</h2>
+                                                            <div class="open-assign-auto-room">
+                                                                <div class="open-assign-auto-room-info">
+                                                                    <span class="open-assign-auto-room-name">Room 1</span>
+                                                                    <span class="open-assign-auto-room-count">(3 participants)</span>
+                                                                </div>
+                                                                <button class="open-assign-auto-room-join-button" onclick="goToNextRoom()">Join</button>
+                                                            </div>
+                                                            <div class="open-assign-auto-room">
+                                                                <div class="open-assign-auto-room-info">
+                                                                    <span class="open-assign-auto-room-name">Room 2</span>
+                                                                    <span class="open-assign-auto-room-count">(5 participants)</span>
+                                                                </div>
+                                                                <button class="open-assign-auto-room-join-button" onclick="goToNextRoom()">Join</button>
+                                                            </div>
+                                                            <div class="open-assign-auto-room">
+                                                                <div class="open-assign-auto-room-info">
+                                                                    <span class="open-assign-auto-room-name">Room 3</span>
+                                                                    <span class="ropen-assign-auto-room-count">(2 participants)</span>
+                                                                </div>
+                                                                <button class="open-assign-auto-room-join-button" onclick="goToNextRoom()">Join</button>
+                                                            </div>
+                                                            <div class="open-assign-auto-room">
+                                                                <div class="open-assign-auto-room-info">
+                                                                    <span class="open-assign-auto-room-name ">Room 4</span>
+                                                                    <span class="open-assign-auto-room-count">(4 participants)</span>
+                                                                </div>
+                                                                <button class="open-assign-auto-room-join-button" onclick="goToNextRoom()">Join</button>
+                                                            </div>
+                                                    </div>
+                                                </dialog>
+                                                
+                                            <button id="open-assign-manual-modal" class="assign-btn">Assign manually</button>
+                                                <dialog id="assign-manual" class="assign-manual-modal">
+                                                    <button id="close-assign-manual-modal" class="close-modal" ><i class="fa-regular fa-circle-xmark fa-3x"></i></button>
+                                                    <div class="breakoutrooms">
+                                                        <div class="tick-room">
+                                                        <div class="open-assign-auto-room-info"><span class="open-assign-auto-room-name ">Breakout Room 1</span></div>
+                                                        <button class="open-tick-modal breakoutrooms-btn">Assign</button>
+                                                        </div>
+
+                                                        <div class="tick-room"><div class="open-assign-auto-room-info"><span class="open-assign-auto-room-name ">Breakout Room 2</span></div>
+                                                        <button class="open-tick-modal breakoutrooms-btn">Assign</button>
+                                                        </div>
+                                                        
+                                                        <div class="tick-room"><div class="open-assign-auto-room-info"><span class="open-assign-auto-room-name ">Breakout Room 3</span></div>
+                                                        <button class="open-tick-modal breakoutrooms-btn">Assign</button>
+                                                        </div>
+                                                        
+                                                        <div class="tick-room"><div class="open-assign-auto-room-info"><span class="open-assign-auto-room-name ">Breakout Room 4</span></div>
+                                                        <button class="open-tick-modal breakoutrooms-btn">Assign</button>
+                                                        </div>
+                                                        
+                                                        <dialog id="tick" class="tick">
+                                                            <button id="close-tick-modal" class="close-modal" ><i class="fa-regular fa-circle-xmark fa-3x"></i></button>
+                                                            <div class="search-bar">
+                                                                <input type="text" placeholder="Search">
+                                                                <i class="search-icon"></i>
+                                                            </div>
+                                                        
+                                                            <div class="options">
+                                                                <input type="checkbox" id="student1">
+                                                                <label for="student1">@Student 1</label><br>
+                                                                <input type="checkbox" id="student2">
+                                                                <label for="student2">@Student 2</label><br>
+                                                                <input type="checkbox" id="student3">
+                                                                <label for="student3">@Student 3</label><br>
+                                                                <input type="checkbox" id="student4">
+                                                                <label for="student4">@Student 4</label><br>
+                                                                <input type="checkbox" id="student5">
+                                                                <label for="student5">@Student 5</label><br>
+                                                            </div>
+                                                        
+                                                            <button id="close-tick-modal" class="assign-button">Assign</button>
+                                                        
+                                                        </dialog>
+
+                                                        <button id="close-apply-modal" class="apply">Apply</button>
+
+                                                    </div>
+                                                </dialog>
+                                    </div>
+                                    </div>
+                                </dialog>
+                        </div>
+                    </dialog>
+                </div>
+            
+                <div class="feature-item">
+                    <button id="open-chat-modal" class="feature-button"><i class="fa-regular fa-message fa-3x"></i></button>
+                    <p class="font-color">Chat</p>
+                        <dialog id="chat" class="chat">
+                        <button id="close-chat-modal" class="close-modal" ><i class="fa-solid fa-down-left-and-up-right-to-center fa-3x"></i></button>
+                        <form class="form-container" action="#">
+                        <div><label for="msg">Welcome to the chatroom !</label></div>
+                        <textarea placeholder="Good morning! I hope everyone is ready for class. Just a quick reminder to check your WiFi connection and make sure everything is set up properly.Class will begin in 5minutes!" id="text"></textarea>
+                        <input id="newText" type="text" class="input" placeholder="Enter your messege here!">
+                        <button type="submit" class="btn" onclick="addText()">Send</button>
+                        </form>
+                        </dialog>
+                </div>
+
+            </div>
+          </dialog>
+
+        <div class="grid-item item4">
+            <button class="good_button"><i class="fa-solid fa-thumbs-up fa-2x"></i></button>
+        </div>
+
+        <dialog id="shared-screen-modal" class="slide-modal">
+            <button id="close-shared-screen-modal" class="close-modal"></button>
+            <div class="feature-container">
+            <video id="shared-screen-video" width="100%" height="100%"></video>
+            <button id="stop-sharing-button" class="feature-button">Stop Sharing</button>
+            </dialog> 
+
+        <div class="grid-item item5">
+             <div class = "fourButton-container">
+                <button id="videoIcon" class="fourButton"><i class="fa-solid fa-video fa-3x"></i></button>                
+                <button id="microphoneIcon" class="fourButton"><i class="fa-solid fa-microphone fa-3x"></i></button>
+                <button id="sharescreen" class="fourButton"><i class="fa-solid fa-arrow-up-from-bracket fa-3x"></i></button>
+                <button onclick="goBack()" class="fourButton"><i class="fa-solid fa-phone-slash fa-3x"></i></button>
+             </div>
+        </div>
+    </div>
+
+    <script src="video_call_teacher.js"></script>
+
+</body>
+
+</html>
