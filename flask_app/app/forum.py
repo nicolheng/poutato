@@ -1,5 +1,5 @@
-from flask import render_template
-from app.forum import bp
+from flask import Blueprint, render_template
+bp = Blueprint('forum', __name__)
 
 @bp.route('/')
 def index():
