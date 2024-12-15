@@ -76,3 +76,13 @@ class take(db.Model):
 
     student = relationship('student', foreign_keys="student.idStud")
     quiz = relationship('quiz', foreign_keys="quiz.idQuiz")
+
+class poutato(db.Model):
+    idPoutato = db.Column(db.Integer, ForeignKey(quiz.idQuiz), primary_key=True)
+    idStud = db.Column(db.Integer, ForeignKey(student.idStud))
+    hunger = db.Column(db.Integer)
+    happiness = db.Column(db.Integer)
+    health = db.Column(db.Integer)
+    energy = db.Column(db.Integer)
+
+    student = relationship('student', foreign_keys="student.idStud")
