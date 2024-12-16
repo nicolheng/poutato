@@ -7,10 +7,25 @@
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
         <link href="{{ url_for('static', filename='style.css') }}" rel="stylesheet">
+        {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                <script>
+                    var messages = "{{ messages|safe}}";
+                        alert(messages[0]);
+                </script>
+            {% endif %}
+        {% endwith %}
+        <script>
+            function validateTOC() {
+                if (!(document.getElementById('toc').checked)) {
+                    alert("Agree with the TOC to sign up");
+                }
+            }
+        </script>
     </head>
     <body>
         <div class="rounded-5 m-3 mt-4 d-flex flex-column" id="box">
-            <a class="text-white mt-3 ms-3" href="login.html">
+            <a class="text-white mt-3 ms-3" href="{{url_for('auth.login')}}">
                 <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-arrow-left" viewBox="0 0 16 16">
                     <path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8"/>
                 </svg>
@@ -18,18 +33,18 @@
             <div class="m-2 text-center">
                 <div class="display-1 text-white">Sign Up</div>
             </div>
-            <form class="form">
+            <form class="form" method="post" onsubmit="validateTOC()">
                 <div class="row m-2 ms-3 me-3">
                     <label class="form-label text-white">Name</label>
                     <input class="form-control" type="text" name="name">
                 </div>
                 <div class="row m-2 ms-3 me-3">
                     <label class="form-label text-white">Date of Birth</label>
-                    <input class="form-control text-white" type="date" name="dob">
+                    <input class="form-control" type="date" name="dob">
                 </div>
                 <div class="row m-2 ms-3 me-3">
                     <label class="form-label text-white">Gender</label>
-                    <select class="form-select text-white" name="gender">
+                    <select class="form-select" name="gender">
                         <option selected></option>
                         <option value="F">Female</option>
                         <option value="M">Male</option>
@@ -53,22 +68,22 @@
                 </div>
                 <div class="row m-3 radio">
                     <div class="col form-check d-flex justify-content-center">
-                        <input class="form-check-input text-white me-2" type="radio" name="type" id="typeStudent">
+                        <input class="form-check-input text-white me-2" type="radio" name="type" id="typeStudent" value="student">
                         <label class="form-check-label text-white">Student</label>
                     </div>
                     <div class="col form-check d-flex justify-content-center">
-                        <input class="form-check-input text-white me-2" type="radio" name="type" id="typeTeacher">
+                        <input class="form-check-input text-white me-2" type="radio" name="type" id="typeTeacher" value="teacher">
                         <label class="form-check-label text-white">Teacher</label>
                     </div>
                 </div>
                 <div class="row m-2 ms-3 me-3">
                     <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="yes" name="toc">
+                        <input class="form-check-input" type="checkbox" value="yes" name="toc" id="toc">
                         <label class="form-check-label text-white">By providing your information, you acknowledge that you have read, understood and agreed to our <br><a data-bs-toggle="modal" data-bs-target="#modalToc" style="color:#e89e64">Terms & Conditions</a></label>
                     </div>
                 </div>
                 <div class="text-center">
-                    <button class="btn btn-primary mb-3 ps-5 pe-5" type="button" name="submit" style="background-color: #e89e64;" onclick="location.href('index.html')">Register</button>
+                    <button class="btn btn-primary mb-3 ps-5 pe-5" type="submit" name="submit" style="background-color: #e89e64;">Register</button>
                 </div>
             </form>
         

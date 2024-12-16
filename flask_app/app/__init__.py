@@ -9,13 +9,16 @@ def create_app(config_class=Config):
     # Initialize Flask extensions here
     db.init_app(app)
     # Register blueprints here
-    from flask_app.app.main import bp as main_bp
+    from app.main import bp as main_bp
     app.register_blueprint(main_bp)
 
-    from flask_app.app.forum import bp as forum_bp
+    from app.forum import bp as forum_bp
     app.register_blueprint(forum_bp, url_prefix='/forum')
 
-    from flask_app.app.poutato import bp as poutato_bp
+    from app.poutato import bp as poutato_bp
     app.register_blueprint(poutato_bp, url_prefix='/poutato')
+
+    from app.auth import bp as auth_bp
+    app.register_blueprint(auth_bp, url_prefix='/auth')
 
     return app
