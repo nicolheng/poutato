@@ -13,7 +13,7 @@
 
 <body>
     <button id="toggleAudio" class="audio"><i class="fa-solid fa-volume-high fa-2x"></i></button>
-    <button class="button_1" onclick="goBack()"><i class="fa-solid fa-arrow-left fa-3x"></i></button>
+    <button class="button_1" href="{{url_for('quiz_interface')}}""><i class="fa-solid fa-arrow-left fa-3x"></i></button>
     <div class="buttons">
         <button id="A" class="A">MAN</button>
             <dialog id="A-modal">
@@ -52,10 +52,6 @@
     </audio>
 
     <script>
-
-        function goBack() {
-            window.location.href = "quiz_interface.html"; // Change this to your target page
-        }
 
         const openBtn_A = document.querySelector('#A');
         const dialog_A = document.querySelector('#A-modal');
