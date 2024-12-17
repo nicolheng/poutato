@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="video_call_teacher.css">
-    <link rel ="stylesheet" href="css/all.min.css">
-    <link rel ="stylesheet" href="css/fontawesome.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/video_call_teacher.css') }}">
+     <link rel="stylesheet" href="{{ url_for('static', filename='css/all.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/fontawesome.min.css') }}">
     <title>Custom Layout</title>
 </head>
 
@@ -15,7 +15,7 @@
         <div class="grid-item item1">
             <div class = "topbutton_container">
 
-                <button class="topbutton" onclick="goBack()" ><i class="fa-solid fa-down-left-and-up-right-to-center fa-3x"></i></button>
+                <button class="topbutton" href="{{ url_for('main.index') }}" ><i class="fa-solid fa-down-left-and-up-right-to-center fa-3x"></i></button>
 
                 <button id="open-chart-modal" class="topbutton"><i class="fa-solid fa-chart-simple fa-3x"></i></button>
                 <dialog id="chart" class="chart-modal">
@@ -80,7 +80,7 @@
         </div>
 
         <div class="switch-container">
-            <button class="switch" onclick="goToNextPage()">Switch to student mode</button>
+            <button class="switch" href="{{ url_for('potato.index') }}">Switch to student mode</button>
         </div>
         
         <dialog id="slidebar" class="slide-modal">
@@ -474,12 +474,12 @@
                 <button id="videoIcon" class="fourButton"><i class="fa-solid fa-video fa-3x"></i></button>                
                 <button id="microphoneIcon" class="fourButton"><i class="fa-solid fa-microphone fa-3x"></i></button>
                 <button id="sharescreen" class="fourButton"><i class="fa-solid fa-arrow-up-from-bracket fa-3x"></i></button>
-                <button onclick="goBack()" class="fourButton"><i class="fa-solid fa-phone-slash fa-3x"></i></button>
+                <button href="{{ url_for('main.index') }}" class="fourButton"><i class="fa-solid fa-phone-slash fa-3x"></i></button>
              </div>
         </div>
     </div>
 
-    <script src="video_call_teacher.js"></script>
+    <script src="{{ url_for('static', filename='js/video_call_teacher.js') }}"></script>
 
 </body>
 

@@ -5,27 +5,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Quiz interfaces</title>
     <link href="https://fonts.cdnfonts.com/css/public-pixel" rel="stylesheet">
-    <link rel="stylesheet" href="quiz_interface.css";>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/quiz_interface.css') }}">
     <link href="https://fonts.cdnfonts.com/css/sofia-sans-condensed" rel="stylesheet">
-    <link rel ="stylesheet" href="css/all.min.css">
-    <link rel ="stylesheet" href="css/fontawesome.min.css">      
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/all.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/fontawesome.min.css') }}">   
     <script src="https://kit.fontawesome.com/a2c9f2c27c.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
     <div>
-       <button class="button_1" onclick="goBack()"><i class="fa-solid fa-arrow-left fa-3x"></i></button> 
+       <button class="button_1" href="{{ url_for('main.index') }}"><i class="fa-solid fa-arrow-left fa-3x"></i></button> 
         <h1 class ="tittle"> QUIZ </h1>
     </div>
     <div class="image-container"></div>
         <img src = "image/quiz_interface_image.jpg" class="quiz_interface_pic">
-        <button class="button_2" onclick="goToNextPage()">START</button>
+        <button class="button_2"  href="{{ url_for('quiz_game') }}">START</button>
     </div>
 
     <button id="toggleAudio" class="audio"><i class="fa-solid fa-volume-high fa-3x"></i></button>
 
         <audio autoplay id="song">
-            <source src="audio/[MapleStory BGM] Ereve_ Raindrop Flower.mp3">
+            <source src="{{ url_for('static', filename='audio/[MapleStory BGM] Ereve_ Raindrop Flower.mp3') }}" type="audio/mpeg">
         </audio>
 
     <button class="button_3" id="leaderboard-modal"><i class="fa-solid fa-medal fa-3x "></i>
@@ -36,13 +36,6 @@
             </dialog>
 
     <script>
-        function goBack() {
-            window.location.href = "null.html"; // Change this to your target page
-        }
-
-        function goToNextPage() {
-            window.location.href = "quiz_game.html"; // Change this to your target page
-        }
 
         const openbtn = document.querySelector('#leaderboard-modal');
         const dialog = document.querySelector('#leaderboard');
