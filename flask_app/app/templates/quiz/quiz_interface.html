@@ -5,10 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Quiz interfaces</title>
     <link href="https://fonts.cdnfonts.com/css/public-pixel" rel="stylesheet">
-    <link rel="stylesheet" href="quiz_interface.css";>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/quiz_interface.css') }}">
     <link href="https://fonts.cdnfonts.com/css/sofia-sans-condensed" rel="stylesheet">
-    <link rel ="stylesheet" href="css/all.min.css">
-    <link rel ="stylesheet" href="css/fontawesome.min.css">      
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/all.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/fontawesome.min.css') }}">   
     <script src="https://kit.fontawesome.com/a2c9f2c27c.js" crossorigin="anonymous"></script>
 </head>
 
@@ -25,7 +25,7 @@
     <button id="toggleAudio" class="audio"><i class="fa-solid fa-volume-high fa-3x"></i></button>
 
         <audio autoplay id="song">
-            <source src="audio/[MapleStory BGM] Ereve_ Raindrop Flower.mp3">
+            <source src="{{ url_for('static', filename='audio/[MapleStory BGM] Ereve_ Raindrop Flower.mp3') }}" type="audio/mpeg">
         </audio>
 
     <button class="button_3" id="leaderboard-modal"><i class="fa-solid fa-medal fa-3x "></i>
