@@ -205,6 +205,3 @@ document.getElementById("colorToggleButton").addEventListener("click", function 
     }
 });
 
-
-    window.location.href = ""; // Change this to your target page
-}
