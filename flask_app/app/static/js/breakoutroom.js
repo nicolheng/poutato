@@ -1,10 +1,3 @@
-function goToNextRoom(){
-    window.location.href = "video_call.html"; // Change this to your target page
-}
-
-function goToNextPage() {
-    window.location.href = "video_call_teacher.html";
-}
 
 const openbulbbtn = document.querySelector('#open-bulb-modal');
 const closebulbbtn = document.querySelector('#close-bulb-modal');
@@ -213,6 +206,3 @@ document.getElementById("colorToggleButton").addEventListener("click", function 
 });
 
 //4button-4
-function goBack() {
-    window.location.href = ""; // Change this to your target page
-}
