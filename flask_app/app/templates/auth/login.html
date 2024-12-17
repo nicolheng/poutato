@@ -10,8 +10,8 @@
         {% with messages = get_flashed_messages() %}
             {% if messages %}
                 <script>
-                    var messages = "{{ messages|safe}}";
-                        alert(messages[0]);
+                    var messages ="{{ messages|safe}}";
+                        alert(messages);
                 </script>
             {% endif %}
         {% endwith %}

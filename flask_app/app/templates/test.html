@@ -1,0 +1,21 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+        {% if session['type']=='teacher' %}
+            <a href="{{url_for('test.show_poll')}}">poll</a>
+        {% endif %}
+        {% if show %}
+            {% for poll in polls %}
+                <a href="{{url_for('test.choose_poll(poll.idPoll)')}}">{{poll.ques}}</a>
+            {% endfor %}
+        {% endif %}
+
+        {% if session['type']=='student' and choose %}
+            {% for choice in choices %}
+                <a href="{{url_for('test.vote(choice.idChoice)')}}" type="button">{{choice.choice}}</a>
+            {% endfor %}
+        {% endif %}
+    </body>
+</html>
