@@ -1,14 +1,4 @@
-function goBack() {
-    window.location.href = ""; // Change this to your target page
-}
 
-function goToNextPage() {
-  window.location.href = "video_call.html";
-}
-
-function goToNextRoom() {
-  window.location.href = "breakoutroom.html";
-}
 
 const closechoicebtn = document.querySelector('#close-choice-modal');
 
@@ -439,9 +429,7 @@ videoIcon.addEventListener('click', async () => {
 });
 
 //4button-4
-function goBack() {
-    window.location.href = ""; // Change this to your target page
-}
+
 
 document.getElementById("open-recording-modal").addEventListener("click", function () {
   const currentColor = window.getComputedStyle(this).backgroundColor;
