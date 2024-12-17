@@ -14,12 +14,12 @@
 
 <body>
     <div>
-       <button class="button_1" onclick="goBack()"><i class="fa-solid fa-arrow-left fa-3x"></i></button> 
+       <button class="button_1" href="{{ url_for('potato.index') }}"><i class="fa-solid fa-arrow-left fa-3x"></i></button> 
         <h1 class ="tittle"> QUIZ </h1>
     </div>
     <div class="image-container"></div>
         <img src = "image/quiz_interface_image.jpg" class="quiz_interface_pic">
-        <button class="button_2" onclick="goToNextPage()">START</button>
+        <button class="button_2"  href="{{ url_for('quiz_game') }}">START</button>
     </div>
 
     <button id="toggleAudio" class="audio"><i class="fa-solid fa-volume-high fa-3x"></i></button>
@@ -36,13 +36,6 @@
             </dialog>
 
     <script>
-        function goBack() {
-            window.location.href = "null.html"; // Change this to your target page
-        }
-
-        function goToNextPage() {
-            window.location.href = "quiz_game.html"; // Change this to your target page
-        }
 
         const openbtn = document.querySelector('#leaderboard-modal');
         const dialog = document.querySelector('#leaderboard');
