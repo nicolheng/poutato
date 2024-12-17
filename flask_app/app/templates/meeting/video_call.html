@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="video_call.css">
-    <link rel ="stylesheet" href="css/all.min.css">
-    <link rel ="stylesheet" href="css/fontawesome.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/quiz_game.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/all.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/fontawesome.min.css') }}">
     <title>Custom Layout</title>
 </head>
 
@@ -108,8 +108,8 @@
         </div>
     </div>
 
-    <script src="video_call.js"></script>
-
+    <script src="{{ url_for('static', filename='js/video_call.js') }}"></script>
+    
 </body>
 
 </html>
