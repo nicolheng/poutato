@@ -14,12 +14,12 @@
 
 <body>
     <div>
-       <button class="button_1" href="{{ url_for('main.index') }}"><i class="fa-solid fa-arrow-left fa-3x"></i></button> 
+       <a class="button_1" href="{{url_for('main.index')}}"><i class="fa-solid fa-arrow-left fa-3x"></i></a> 
         <h1 class ="tittle"> QUIZ </h1>
     </div>
     <div class="image-container"></div>
-        <img src = "image/quiz_interface_image.jpg" class="quiz_interface_pic">
-        <button class="button_2"  href="{{ url_for('quiz_game') }}">START</button>
+        <img src = "{{url_for('static', filename='img/quiz_interface_image.jpg')}}" class="quiz_interface_pic">
+        <a type="button" class="button_2"  href="{{url_for('quiz.game')}}">START</a>
     </div>
 
     <button id="toggleAudio" class="audio"><i class="fa-solid fa-volume-high fa-3x"></i></button>
@@ -32,7 +32,7 @@
         <p>Leaderboard</p></button>
             <dialog id="leaderboard" class="leaderboard">
                 <button class="close_modal" id="close-modal"><i class="fa-regular fa-circle-xmark fa-3x"></i></button>
-                <img class=modal-image src="image/lol.jpg">
+                <img class=modal-image src="{{url_for('static', filename='img/lol.jpg')}}">
             </dialog>
 
     <script>
@@ -61,4 +61,4 @@
 </body>
 
 
-</html?
+</html>

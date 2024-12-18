@@ -27,7 +27,7 @@
             <div class="h5">Upcoming Meeting at 12:30 PM</div>
         </div>
         <div class="container-fluid shadow-lg d-flex flex-column shadow-lg pb-5" style="background-color: #0b2545;">
-            <a class="m-3 mb-2 d-flex align-items-center" > <!--href=" url_for('meeting.index') "-->
+            <a class="m-3 mb-2 d-flex align-items-center" href="{{url_for('meeting.index')}}">
                 <div class="rounded-circle bg-white p-2 me-3 text-dark text-bold shadow">
                     <svg xmlns="http://www.w3.org/2000/svg" width="45" height="45" fill="currentColor" class="bi bi-plus" viewBox="0 0 16 16">
                         <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4"/>
@@ -37,7 +37,7 @@
                     Start a Meeting
                 </div>
             </a>
-            <a class="m-3 mb-2 d-flex align-items-center"> <!-- href=" url_for('meeting.room') "-->
+            <a class="m-3 mb-2 d-flex align-items-center" href="{{url_for('meeting.index')}}">
                 <div class="rounded-circle bg-white p-3 me-3 text-dark text-bold shadow">
                     <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-box-arrow-in-right" viewBox="0 0 16 16">
                         <path fill-rule="evenodd" d="M6 3.5a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-.5.5h-8a.5.5 0 0 1-.5-.5v-2a.5.5 0 0 0-1 0v2A1.5 1.5 0 0 0 6.5 14h8a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5 2h-8A1.5 1.5 0 0 0 5 3.5v2a.5.5 0 0 0 1 0z"/>
@@ -65,7 +65,7 @@
                     <div class="text-dark m-2">
                         📅 Upcoming Meeting<br>Date: October 28, 2024<br>Time: 3:00 PM<br>⏳ Countdown: 2 days 1 hour 34minutes remaining
                     </div>
-                    <a class="btn btn-primary float-end mb-2" style="background-color:#e89e64;" >Join Meeting</a> <!--href=" url_for('meeting.room') "-->
+                    <a class="btn btn-primary float-end mb-2" style="background-color:#e89e64;" href="{{url_for('meeting.index')}}">Join Meeting</a> <!---->
                 </div>
             </div>
             <div class="m-3 mb-2 d-flex align-items-center text-white">
@@ -107,7 +107,7 @@
         <div class="p-5"></div>
         <nav class="navbar p-2 fixed-bottom border-top border-2 d-flex justify-content-center">
             <div class="m-1 me-2">
-                <a > <!--href=" url_for('quiz.index') "-->
+                <a href="{{url_for('quiz.index')}}">
                     <div class="bg-white rounded-4 text-dark p-3">
                         <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-lightbulb" viewBox="0 0 16 16">
                             <path d="M2 6a6 6 0 1 1 10.174 4.31c-.203.196-.359.4-.453.619l-.762 1.769A.5.5 0 0 1 10.5 13a.5.5 0 0 1 0 1 .5.5 0 0 1 0 1l-.224.447a1 1 0 0 1-.894.553H6.618a1 1 0 0 1-.894-.553L5.5 15a.5.5 0 0 1 0-1 .5.5 0 0 1 0-1 .5.5 0 0 1-.46-.302l-.761-1.77a2 2 0 0 0-.453-.618A5.98 5.98 0 0 1 2 6m6-5a5 5 0 0 0-3.479 8.592c.263.254.514.564.676.941L5.83 12h4.342l.632-1.467c.162-.377.413-.687.676-.941A5 5 0 0 0 8 1"/>

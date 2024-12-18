@@ -15,7 +15,7 @@
         <div class="grid-item item1">
             <div class = "topbutton_container">
 
-                <button class="topbutton" href="{{ url_for('main.index') }}"> ><i class="fa-solid fa-down-left-and-up-right-to-center fa-3x"></i></button>
+                <a type="button" class="topbutton" href="{{ url_for('main.index') }}"><i class="fa-solid fa-down-left-and-up-right-to-center fa-3x"></i></a>
 
                 <button id="open-bulb-modal" class="topbutton"><i class="fa-solid fa-lightbulb fa-3x"></i></button>
                 <dialog id="bulb" class="bulb-modal">
@@ -51,16 +51,12 @@
         <div class="grid-item item2">
             <video id="video" width="640" height="480"></video>
             <div class="name">
-                <p ></p>your_username</p>
+                <p >{{user.name}}</p>
             </div>    
         </div>
 
         <div class="grid-item item3">
             <button id="open-slidebar-modal" class="button_container"></button>
-        </div>
-
-        <div class="switch-container">
-            <button class="switch" href="{{ url_for('video_call_teacher') }}">Switch to teacher mode</button>
         </div>
         
         <dialog id="slidebar" class="slide-modal">
@@ -94,8 +90,11 @@
             </div>
           </dialog>
 
-        <div class="grid-item item4">
-            <button class="good_button"><i class="fa-solid fa-thumbs-up fa-2x"></i></button>
+        <div class="grid-item item4" style="border-radius: 100%;background-color: white;">
+            <label class="like">
+                <input type="checkbox"/>
+                <div class="hearth"></div>
+            </label>
         </div>
 
         <div class="grid-item item5">

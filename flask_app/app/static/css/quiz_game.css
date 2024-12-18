@@ -3,11 +3,7 @@
     padding : 0;
 }
 
-body {
-    background: url('image/lol2.jpg'); /* Replace with your actual image path */
-    background-repeat: no-repeat;
-    background-position: top center; /* Ensures proper alignment */
-    background-size: cover; /* Makes sure the background fills the screen */
+body { /* Replace with your actual image path */
     height: 100vh; /* Full height of the viewport */
     width: 100vw; /* Full width of the viewport */
     display: flex;
@@ -16,15 +12,20 @@ body {
     align-items: center;
     overflow: hidden; /* Prevents scrollbars from appearing */
     position: relative;
-    top: 33em;
 }
-
+.test {
+    margin-top: 20px;
+    margin-right:auto;
+}
+.buttons {
+    margin-top: auto;
+    margin-bottom: 50px;
+}
 .button_1{
-    position:relative;
-    bottom:33rem;
-    right:10rem;
+    margin: 20px;
+    padding: 5px;
     border: none;
-    background-color:transparent ;
+    background-color:transparent;
     color: white;
 }
 

@@ -9,16 +9,25 @@
      <link rel="stylesheet" href="{{ url_for('static', filename='css/all.min.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/fontawesome.min.css') }}">
     <script src="https://kit.fontawesome.com/a2c9f2c27c.js" crossorigin="anonymous"></script>
+    <style>
+        body {
+            background: url('{{url_for("static",filename="img/lol2.jpg")}}');
+            background-repeat: no-repeat;
+            background-position: top center;
+            background-size: cover;
+        }
+    </style>
 </head>
 
 <body>
-    <button id="toggleAudio" class="audio"><i class="fa-solid fa-volume-high fa-2x"></i></button>
-    <button class="button_1" href="{{url_for('quiz_interface')}}""><i class="fa-solid fa-arrow-left fa-3x"></i></button>
+    <div class="test">
+        <a type="button" class="button_1" href="{{url_for('quiz.index')}}"><i class="fa-solid fa-arrow-left fa-3x"></i></a>
+    </div>
     <div class="buttons">
         <button id="A" class="A">MAN</button>
             <dialog id="A-modal">
                 <button id="close_modal_A" class="close_button"><i class="fa-regular fa-circle-xmark fa-3x"></i></button>
-                <p class="h4">Your answer is correct</p>
+                <p class="h4">Your answer is incorrect!</p>
                 <description class="des">Wide-area networks ( WANs ) provide inter-LAN connectivity between sites</description>
             </dialog>
         
@@ -27,29 +36,26 @@
         <button id="B" class="A">PAN</button>
             <dialog id="B-modal">
                 <button id="close_modal_B" class="close_button"><i class="fa-regular fa-circle-xmark fa-3x"></i></button>
-                <p class="h4">Your answer is correct</p>
+                <p class="h4">Your answer is incorrect!</p>
                 <description class="des">Wide-area networks ( WANs ) provide inter-LAN connectivity between sites</description>
             </dialog>
     <br>
         <button id="C" class="C">WAN</button>
             <dialog id="C-modal">
                 <button id="close_modal_C" class="close_button"><i class="fa-regular fa-circle-xmark fa-3x"></i></button>
-                <p class="h4">Your answer is correct</p>
+                <p class="h4">Your answer is correct!</p>
                 <description class="des">Wide-area networks ( WANs ) provide inter-LAN connectivity between sites</description>
             </dialog>
     <br>
         <button id="D" class="A">LAN</button>
             <dialog id="D-modal">
                 <button id="close_modal_D" class="close_button"><i class="fa-regular fa-circle-xmark fa-3x"></i></button>
-                <p class="h4">Your answer is correct</p>
+                <p class="h4">Your answer is incorrect!</p>
                 <description class="des">Wide-area networks ( WANs ) provide inter-LAN connectivity between sites</description>
             </dialog>
             
     </div>
 
-    <audio id="song" autoplay>
-        <source src="{{ url_for('static', filename='audio/[MapleStory BGM] Ludibrium_ Timeless.mp3') }}" type="audio/mpeg">
-    </audio>
 
     <script>
 
